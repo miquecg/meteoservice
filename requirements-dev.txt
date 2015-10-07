@@ -1,0 +1,8 @@
+-e .
+coverage==4.0
+flexmock==0.9.7
+py==1.4.30
+pytest==2.8.1
+pytest-cov==2.2.0
+requests==2.8.0
+wsgi-intercept==0.10.3

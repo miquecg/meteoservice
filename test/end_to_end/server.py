@@ -1,8 +1,8 @@
-from wsgiref.simple_server import make_server
 import multiprocessing
+from wsgiref.simple_server import make_server
 
 
-class ForecastServer:
+class Server:
 
     def __init__(self):
         self._httpd_process = None
@@ -16,7 +16,6 @@ class ForecastServer:
 
     def stop(self):
         if self._httpd_process:
-            self._httpd_process.join()
             self._httpd_process.terminate()
 
         del self._httpd_process

@@ -7,5 +7,14 @@ setup(
     author='Miguel Casal',
     url='https://github.com/miquecg/meteoservice',
     packages=['meteoservice'],
-    package_dir={'': 'src'}
-    )
+    package_dir={'': 'src'},
+    extras_require={
+        'test': [
+            'coverage',
+            'flexmock',
+            'py',
+            'pytest',
+            'pytest-cov',
+            'wsgi-intercept'
+        ]
+    })

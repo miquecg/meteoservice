@@ -9,4 +9,4 @@ install:
     - "pip install '.[test]' -r requirements.txt"
 
 # tests
-script: py.test --cov-report= --cov=src/meteoservice test/
+script: py.test --cov-report= --cov=meteoservice test/

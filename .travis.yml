@@ -8,8 +8,8 @@ cache:
     directories:
         - $PWD/wheelhouse
 install:
-    - pip wheel --find-links=wheelhouse -r requirements-dev.txt
-    - pip install --use-wheel --no-index --find-links=wheelhouse -r requirements-dev.txt
+    - pip wheel --find-links=wheelhouse scrutinizer-ocular -r requirements-dev.txt
+    - pip install --use-wheel --no-index --find-links=wheelhouse scrutinizer-ocular -r requirements-dev.txt
     - pip install -e .
 
 # tests
@@ -17,5 +17,4 @@ script: py.test --cov-report= --cov=src/meteoservice test/
 
 # send coverage to scrutinizer
 after_script:
-    - pip install scrutinizer-ocular
     - ocular

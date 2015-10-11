@@ -1,10 +1,10 @@
 from abc import ABCMeta
 
-from .exceptions import EmptyClient
-from .exceptions import EventNotInitialized
-from .exceptions import EventUnknown
-from .exceptions import HandlerNotCallable
-from .exceptions import NoDispatcherForStatusCode
+from meteoservice.exceptions import EmptyClient
+from meteoservice.exceptions import EventNotInitialized
+from meteoservice.exceptions import EventUnknown
+from meteoservice.exceptions import HandlerNotCallable
+from meteoservice.exceptions import NoDispatcherForStatusCode
 import requests
 
 

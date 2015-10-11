@@ -6,7 +6,7 @@ python:
 # dependencies
 install:
     - pip install -U pip # with older pip extras_require doesn't work
-    - "pip install -e '.[test]' -r requirements.txt"
+    - pip install -e ''.[test]'' -r requirements.txt
 
 # tests
 script: py.test --cov-report= --cov=src/meteoservice test/

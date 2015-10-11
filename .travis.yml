@@ -10,3 +10,8 @@ install:
 
 # tests
 script: py.test --cov-report= --cov=src/meteoservice test/
+
+# send coverage to scrutinizer
+after_script:
+    - pip install scrutinizer-ocular
+    - ocular

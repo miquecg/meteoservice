@@ -1,7 +1,3 @@
-from .client import Client
-from .client import DispatcherFactory
-
-
 class App:
 
     def __init__(self, wsconsumer):

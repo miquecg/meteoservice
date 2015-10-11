@@ -4,9 +4,15 @@ python:
     - "3.5"
 
 # dependencies
+cache:
+    directories:
+        - $PWD/wheelhouse
 install:
-    - pip install -U pip # with older pip extras_require doesn't work
-    - pip install -e ''.[test]'' -r requirements.txt
+    - pip install -U pip # make sure we have the latest pip that supports wheel
+    - pip install wheel
+    - pip wheel --find-links=wheelhouse -r requirements-dev.txt
+    - pip install --use-wheel --no-index --find-links=wheelhouse -r requirements-dev.txt
+    - pip install -e .
 
 # tests
 script: py.test --cov-report= --cov=src/meteoservice test/
